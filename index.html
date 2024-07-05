@@ -6,6 +6,20 @@
     <title>Modern Vinil</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/logo_2.png">
+    <script>document.addEventListener('DOMContentLoaded', () => {
+        const cartCount = document.querySelector('.contagem-cart');
+        const addToCartButtons = document.querySelectorAll('.add-carrinho');
+       
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+                const currentCount = parseInt(cartCount.textContent);
+                cartCount.textContent = currentCount + 1;
+                alert(`"${button.getAttribute('data-disco')}" foi adicionado ao carrinho!`);
+            });
+        });
+    });
+    </script>
 </head>
 <body>
     <!-- Cabeçalho -->
@@ -18,7 +32,8 @@
                 <input type="text" placeholder="Pesquisar">
                 <div id="caixa">
                     <a href="#"><img src="img/favorito.jpg" alt="Carrinho"></a>
-                    <a href="#"><img src="img/carrinho.png" alt="Desejos"></a>
+                    <div><span class="contagem-cart">0</span></div>
+                    <a href="#" class="cart"><img src="img/carrinho.png" alt="Desejos"></a>
                 </div>
             </div>
             <div id="container-inf">
@@ -54,44 +69,48 @@
     <!-- Aqui criamos 4 divs para colocar 4 discos para representar os discos que estão disponíveis
     para serem vendidos. -->
     <div id="discos">
-        <a href="">
+        <a href="#">
             <div class="disc">
-                <img src="img/foto_disco.jpg" alt="capa do disco">
-                <p>Artista: </p>
-                <p>Genêro Musical: </p>
-                <p>Preço: </p>
-                <p>Ano de lançamento: </p>
-                <p>Estado de Conservação: </p>
+                <img src="img/foto_disco1.jpg" alt="capa do disco">
+                <p>Artista: <span></span></p>
+                <p>Genêro Musical: <span></span></p>
+                <p>Preço: <span></span></p>
+                <p>Ano de lançamento: <span></span></p>
+                <p>Estado de Conservação: <span></span></p>
+                <button class="add-carrinho">Adicionar ao carrinho</button>
             </div>
         </a>
-        <a href="">
+        <a href="#">
             <div class="disc">
-                <img src="img/foto_disco.jpg" alt="capa do disco">
-                <p>Artista: </p>
-                <p>Genêro Musical: </p>
-                <p>Preço: </p>
-                <p>Ano de lançamento: </p>
-                <p>Estado de Conservação: </p>
+                <img src="img/foto_disco2.jpg" alt="capa do disco">
+                <p>Artista: <span></span></p>
+                <p>Genêro Musical: <span></span></p>
+                <p>Preço: <span></span></p>
+                <p>Ano de lançamento: <span></span></p>
+                <p>Estado de Conservação: <span></span></p>
+                <button class="add-carrinho">Adicionar ao carrinho</button>
             </div>
         </a>
-        <a href="">
+        <a href="#">
             <div class="disc">
-                <img src="img/foto_disco.jpg" alt="capa do disco">
-                <p>Artista: </p>
-                <p>Genêro Musical: </p>
-                <p>Preço: </p>
-                <p>Ano de lançamento: </p>
-                <p>Estado de Conservação: </p>
+                <img src="img/foto_disco3.jpg" alt="capa do disco">
+                <p>Artista: <span></span></p>
+                <p>Genêro Musical: <span></span></p>
+                <p>Preço: <span></span></p>
+                <p>Ano de lançamento: <span></span></p>
+                <p>Estado de Conservação: <span></span></p>
+                <button class="add-carrinho">Adicionar ao carrinho</button>
             </div>
         </a>
-        <a href="">
+        <a href="#">
             <div class="disc">
-                <img src="img/foto_disco.jpg" alt="capa do disco">
-                <p>Artista: </p>
-                <p>Genêro Musical: </p>
-                <p>Preço: </p>
-                <p>Ano de lançamento: </p>
-                <p>Estado de Conservação: </p>
+                <img src="img/foto_disco4.jpg" alt="capa do disco">
+                <p>Artista: <span></span></p>
+                <p>Genêro Musical: <span></span></p>
+                <p>Preço: <span></span></p>
+                <p>Ano de lançamento: <span></span></p>
+                <p>Estado de Conservação: <span></span></p>
+                <button class="add-carrinho">Adicionar ao carrinho</button>
             </div>
         </a>
     </div>
@@ -100,38 +119,42 @@
     <div id="produtos">
         <a href="">
             <div class="prod">
-                <img src="img/foto_vitrola.jpg" alt="Capa do Produto">
-                <p>Produto: </p>
-                <p>Preço: </p>
-                <p>Ano de Produção: </p>
-                <p>Tipo de Produto: </p>
+                <img src="img/foto_vitrola1.jpg" alt="Capa do Produto1">
+                <p>Produto: <span></span></p>
+                <p>Preço: <span></span></p>
+                <p>Ano de Produção: <span></span></p>
+                <p>Tipo de Produto: <span></span></p>
+                <button class="add-carrinho">Adicionar ao carrinho</button>
             </div>
         </a>
         <a href="">
             <div class="prod">
-                <img src="img/foto_vitrola.jpg" alt="Capa do Produto">
-                <p>Produto: </p>
-                <p>Preço: </p>
-                <p>Ano de Produção: </p>
-                <p>Tipo de Produto: </p>
+                <img src="img/foto_vitrola2.jpg" alt="Capa do Produto2">
+                <p>Produto: <span></span></p>
+                <p>Preço: <span></span></p>
+                <p>Ano de Produção: <span></span></p>
+                <p>Tipo de Produto: <span></span></p>
+                <button class="add-carrinho">Adicionar ao carrinho</button>
             </div>
         </a>
         <a href="">
             <div class="prod">
-                <img src="img/foto_vitrola.jpg" alt="Capa do Produto">
-                <p>Produto: </p>
-                <p>Preço: </p>
-                <p>Ano de Produção: </p>
-                <p>Tipo de Produto: </p>
+                <img src="img/foto_vitrola3.jpg" alt="Capa do Produto3">
+                <p>Produto: <span></span></p>
+                <p>Preço: <span></span></p>
+                <p>Ano de Produção: <span></span></p>
+                <p>Tipo de Produto: <span></span></p>
+                <button class="add-carrinho">Adicionar ao carrinho</button>
             </div>
         </a>
         <a href="">
             <div class="prod">
-                <img src="img/foto_vitrola.jpg" alt="Capa do Produto">
-                <p>Produto: </p>
-                <p>Preço: </p>
-                <p>Ano de Produção: </p>
-                <p>Tipo de Produto: </p>
+                <img src="img/foto_vitrola4.jpg" alt="Capa do Produto4">
+                <p>Produto: <span></span></p>
+                <p>Preço: <span></span></p>
+                <p>Ano de Produção: <span></span></p>
+                <p>Tipo de Produto: <span></span></p>
+                <button class="add-carrinho">Adicionar ao carrinho</button>
             </div>
         </a>
     </div>
@@ -177,5 +200,6 @@
         </div>
     </div>
     <footer><span>&#169; Copyright 2024 - Mateus Santos</span></footer>
+
 </body>
 </html>

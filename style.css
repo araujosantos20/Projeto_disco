@@ -51,6 +51,19 @@ header{
     margin-top: 10px;
 }
 
+#caixa div span{
+    position: absolute;
+    margin: 30px 25px 0px 0px;
+    width: 30px;
+    height: 25px;
+    border-radius: 30px;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding-top: 4px;
+
+}
+
 #container-sup a img{
     display: flex;
     width: 50px;
@@ -128,7 +141,7 @@ aside img{
     padding: 20px;
     display: flex;
     justify-content: space-evenly;
-    height: 400px;
+    height: 410px;
 }
 
 #discos a{
@@ -136,7 +149,7 @@ aside img{
     background-color: #000;
     color: #fff;
     width: 250px;
-    height: 400px;
+    height: 420px;
     border-radius: 8px;
     transition: transform 1s ease, box-shadow 1s ease;
 }
@@ -157,12 +170,21 @@ aside img{
     padding-bottom: 10px;
 }
 
+.add-carrinho{
+    margin: 0px 0px 10px 10px;
+    width: 150px;
+    height: 34px;
+    background-color: #2323f8;
+    color: #fff;
+    border-radius: 4px;
+}
+
 /* Seção Produtos e acessórios */
 #produtos{
     padding: 20px;
     display: flex;
     justify-content: space-evenly;
-    height: 400px;
+    height: 420px;
     background-color: #000;
 }
 
@@ -261,7 +283,7 @@ footer{
     color: blue;
 }
 
-span{
+span,button{
     font-family: Humnst777 BlkCn BT
 }
 
